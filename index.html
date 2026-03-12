@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Burn After Writing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Burn After Writing</h1>
+
+    <p class="instructions">
+      Stewing on that email you want to write? Scared to hit send? <strong>Burn it instead.</strong>
+      Write your email here, and when you're done, click "Burn" to see it disappear forever.
+      <br>
+      <br>
+      This is a safe space to vent, rant, or just get your thoughts out without the fear of judgment or consequences. Your words will be gone forever, so let it all out!
+      <br>
+      <br>
+      Oh, and you may even get a response.
+    </p>
+
+    <form id="emailForm">
+      <div class="email-header">
+        <div class="field">
+          <label for="to">To</label>
+          <input
+            type="email"
+            id="to"
+            aria-label="Recipient email address"
+            placeholder="someone@somewhere.com"
+          />
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            aria-label="Email subject"
+            placeholder="Your thoughts"
+          />
+        </div>
+      </div>
+
+      <textarea
+        id="ventBox"
+        aria-label="Unsent email text"
+        placeholder="Write that email you're itching to send..."
+        required
+      ></textarea>
+
+      <div class="actions">
+        <button type="submit" id="releaseBtn">Burn</button>
+      </div>
+    </form>
+
+    <!-- Response Modal -->
+    <div id="responseModal" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal" aria-label="Close message">&times;</button>
+        <p id="message"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
